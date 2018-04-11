@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+a {
+  color:rgb(63, 127, 191);
+}
+a:visited{
+color:rgb(63, 127, 191);
+}
+a:hover{
+  color: red;
+}

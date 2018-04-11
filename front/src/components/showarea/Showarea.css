@@ -1,0 +1,176 @@
+.showarea_four {
+  grid-template: auto/repeat(4, 1fr) !important; }
+  @media screen and (max-width: 1320px) {
+    .showarea_four {
+      grid-template: auto/repeat(3, 1fr) !important; } }
+  @media screen and (max-width: 1024px) {
+    .showarea_four {
+      grid-template: auto/repeat(2, 1fr) !important; } }
+  @media screen and (max-width: 840px) {
+    .showarea_four {
+      grid-template: auto/repeat(1, 1fr) !important; } }
+
+.showarea_two {
+  grid-template: auto/repeat(2, 1fr) !important; }
+  @media screen and (max-width: 1024px) {
+    .showarea_two {
+      grid-template: auto/repeat(2, 1fr) !important; } }
+  @media screen and (max-width: 840px) {
+    .showarea_two {
+      grid-template: auto/repeat(1, 1fr) !important; } }
+
+.showboxct_two {
+  min-height: 300px !important; }
+  @media screen and (max-width: 1024px) {
+    .showboxct_two {
+      min-height: 450 !important; } }
+
+.showarea_one {
+  grid-template: auto/repeat(1, 1fr) !important; }
+  @media screen and (max-width: 1024px) {
+    .showarea_one {
+      grid-template: auto/repeat(2, 1fr) !important; } }
+  @media screen and (max-width: 840px) {
+    .showarea_one {
+      grid-template: auto/repeat(1, 1fr) !important; } }
+
+.showboxct_one {
+  min-height: 200px !important; }
+  @media screen and (max-width: 1024px) {
+    .showboxct_one {
+      min-height: 450 !important; } }
+
+.showboxctfancy {
+  border-color: red !important;
+  border-width: 4px !important;
+  background-image: url(../../img/boxbg.jpg) !important;
+  background-position: bottom;
+  background-size: cover; }
+
+.showarea {
+  margin: 0 auto;
+  width: 95%;
+  display: grid;
+  grid-template: auto/repeat(3, 1fr);
+  grid-gap: 20px; }
+  @media screen and (max-width: 1024px) {
+    .showarea {
+      grid-template: auto/repeat(2, 1fr) !important; } }
+  @media screen and (max-width: 840px) {
+    .showarea {
+      grid-template: auto/repeat(1, 1fr) !important; } }
+  .showarea .showboxct {
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-animation-name: fadein;
+            animation-name: fadein;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    background-color: rgba(242, 242, 242, 0.5);
+    border: solid 1px #ddd;
+    border-radius: 10px;
+    min-height: 450px;
+    -webkit-box-shadow: -1px -1px 2px #ccc;
+            box-shadow: -1px -1px 2px #ccc; }
+    @media screen and (max-width: 1024px) {
+      .showarea .showboxct {
+        min-height: 500px; } }
+    @media screen and (max-width: 840px) {
+      .showarea .showboxct {
+        min-height: 350px;
+        width: 98%; } }
+
+@-webkit-keyframes fadein {
+  from {
+    margin-top: -20px;
+    opacity: 0; }
+  to {
+    margin-top: 0;
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    margin-top: -20px;
+    opacity: 0; }
+  to {
+    margin-top: 0;
+    opacity: 1; } }
+    .showarea .showboxct .tweetct {
+      margin: 0 auto;
+      width: 90%;
+      padding: 10px;
+      display: grid;
+      grid-template: 100px 1fr 30px 30px 50px/1fr; }
+      .showarea .showboxct .tweetct .tweethead {
+        display: grid;
+        grid-template: 1fr 1fr/ 100px 1fr; }
+        .showarea .showboxct .tweetct .tweethead .tweetlogo {
+          grid-area: 1/1/3/2;
+          display: grid; }
+          .showarea .showboxct .tweetct .tweethead .tweetlogo .tlogo {
+            -ms-flex-item-align: center;
+                align-self: center;
+            justify-self: center;
+            height: 80px;
+            width: 80px;
+            border: double 3px #eee;
+            border-radius: 40px;
+            -webkit-box-shadow: -1px -1px 2px #666;
+                    box-shadow: -1px -1px 2px #666; }
+        .showarea .showboxct .tweetct .tweethead .twitername {
+          font-family: 'Lobster', cursive;
+          font-size: 1.5rem;
+          grid-area: 1/2/2/3;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-item-align: end;
+              align-self: flex-end; }
+        .showarea .showboxct .tweetct .tweethead .twiterhome {
+          color: #666;
+          grid-area: 2/2/3/3;
+          margin: 3px auto auto 10px; }
+      .showarea .showboxct .tweetct .twittext {
+        overflow-wrap: break-word;
+        color: #777;
+        min-height: 100px;
+        font-size: 1.5rem;
+        padding: 5px 10px 10px 10px;
+        word-break: break-all;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+        font-family: 'Exo 2', sans-serif; }
+      .showarea .showboxct .tweetct .twitdate {
+        padding: 0 0 0px 10px; }
+      .showarea .showboxct .tweetct .twitfav {
+        padding: 0 0 0px 8px; }
+      .showarea .showboxct .tweetct .twitsource {
+        min-height: 100px; }
+      .showarea .showboxct .tweetct .twitgo {
+        text-align: right; }
+        .showarea .showboxct .tweetct .twitgo a {
+          text-decoration: none; }
+        .showarea .showboxct .tweetct .twitgo .goarrow {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          text-align: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-shadow: 1px 1px 1px #666;
+                  box-shadow: 1px 1px 1px #666;
+          font-size: 0.8rem;
+          border-radius: 5px;
+          color: white;
+          border: 1px solid #eee;
+          width: 200px;
+          height: 20px;
+          background-color: rgba(246, 130, 13, 0.9);
+          margin: auto 0 20px auto; }

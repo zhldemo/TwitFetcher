@@ -1,0 +1,165 @@
+@import '../../public.scss';
+.mbwraperfancy {
+  border-color: red !important;
+  box-shadow: none !important;
+  border-width: 3px !important;
+  background-image: url(../../img/fancymb.jpg);
+
+  @media screen and (max-width: $smallscreen) {
+    background-position: center;
+    background-size: auto;
+  }
+}
+.mbwraper {
+  position: fixed;
+  border-width: 1px 3px 3px 3px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 2px 4px 1px #ddd;
+  border-style: solid;
+  border-color: #eee;
+  height: 90px;
+  max-width: 1640px;
+  background-color: white;
+  z-index: 101;
+  margin: 0 auto;
+  display: grid;
+  grid-template: 1fr/190px 1fr;
+  @media screen and (max-width: $largscreen) {
+    border-radius: 0;
+  }
+  .toplogo {
+    margin: 10px auto 0 20px;
+    align-self: center;
+    height: 61px;
+    width: 187px;
+    background-image: url(../../img/toplogo.jpg);
+  }
+  .squarebar {
+    position: absolute;
+    text-align: right;
+    right: 25px;
+    top: 20px;
+    font-size: 3rem;
+    display: none;
+    @media screen and (max-width: 700px) {
+      display: block;
+    }
+  }
+  .btnmask {
+    position: absolute;
+    width: 100%;
+    min-height: 500px;
+    background-color: #000;
+    border-width: 0 0 10px 0;
+    border-style: solid;
+    border-color: red;
+    display: block;
+    @media screen and (min-width: 705px) {
+      display: none;
+    }
+    .close {
+      color: white;
+      text-align: right;
+      font-size: 3rem;
+      width: 95%;
+      margin: 10px 0 0 0;
+    }
+  }
+  .longmnct {
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+  }
+  .mbarea {
+    z-index: 101;
+    width: 60%;
+    text-align: right;
+    height: 30px;
+    align-self: center;
+    display: grid;
+    grid-template: 1fr/350px 450px;
+    justify-content: flex-end;
+    margin: 25px 0 0 auto;
+    @media screen and (max-width: 1020px) {
+      grid-template: 1fr 1fr/450px;
+      margin: 15px 30px auto auto;
+      grid-gap: 5px;
+    }
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      display: grid;
+      position: absolute;
+      text-align: center;
+      grid-template: 1fr/1fr;
+    }
+
+    .btns {
+      max-width: 450px;
+      display: flex;
+      flex-wrap: nowrap;
+      @media screen and (max-width: 1020px) {
+        justify-content: flex-end;
+        @media screen and (max-width: 700px) {
+          max-width: 100%;
+          text-align: center;
+          color: white;
+          display: grid;
+          grid-template: repeat(6, 1fr)/1fr;
+          justify-content: center;
+          width: 100%;
+          margin: 0 auto !important;
+        }
+      }
+    }
+
+    .selects {
+      display: flex;
+      @media screen and (max-width: 1020px) {
+        justify-content: flex-end;
+      }
+      @media screen and (max-width: 700px) {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        height: 80px;
+        margin: 50px 0 0 0;
+      }
+    }
+    .btnline {
+      display: table-cell;
+      border-width: 0 0 3px 0;
+      border-style: solid;
+      border-color: #000;
+      @media screen and (max-width: 700px) {
+        display: block;
+        text-align: center;
+        border-width: 0 0 1px 0;
+        height: 30px;
+        width: 100%;
+        align-items: center;
+        margin: 5px 0 5px 0;
+      }
+    }
+    .mbbtn {
+      width: auto;
+      margin: 0 2% 0 0;
+      font-family: 'Francois One', sans-serif;
+      @media screen and (max-width: 700px) {
+        margin: 0 auto;
+        font-size: 1.5rem;
+        font-family: 'Titillium Web', sans-serif;
+      }
+      .twtfilter {
+        border: solid 2px #ccc;
+        height: 27px;
+        width: 125px;
+        font-size: 12px;
+      }
+    }
+  }
+  .mbarea * {
+    cursor: pointer;
+  }
+}

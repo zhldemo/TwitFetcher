@@ -1,0 +1,159 @@
+@import '../../public.scss';
+.showarea_four{
+  grid-template: auto/repeat(4, 1fr)!important;
+  @media screen and (max-width: 1320px) {
+    grid-template: auto/repeat(3, 1fr) !important;
+  }
+@include showsize;
+}
+.showarea_two{
+  grid-template: auto/repeat(2, 1fr)!important;
+
+@include showsize;
+}
+.showboxct_two{
+  min-height: 300px !important;
+  @media screen and (max-width: $midscreen) {
+    min-height:450 !important;
+  }
+}
+
+.showarea_one{
+  grid-template: auto/repeat(1, 1fr)!important;
+
+@include showsize;
+}
+.showboxct_one{
+  min-height: 200px !important;
+  @media screen and (max-width: $midscreen) {
+    min-height:450 !important;
+  }
+}
+.showboxctfancy{
+  border-color: red !important;
+  border-width: 4px !important;
+  background-image: url(../../img/boxbg.jpg)!important;
+  background-position:bottom;
+  background-size: cover;
+}
+.showarea {
+  margin: 0 auto;
+  width: 95%;
+  display: grid;
+  grid-template: auto/repeat(3, 1fr);
+  @include showsize;
+  grid-gap: 20px;
+  .showboxct {
+    align-self: center;
+    animation-name: fadein;
+    animation-duration: 2s;
+    background-color: rgba(242, 242, 242, 0.5);
+    border: solid 1px #ddd;
+    border-radius: 10px;
+    min-height: 450px;
+    @media screen and (max-width: $midscreen) {
+      min-height: 500px;
+    }
+    @media screen and (max-width: $smallscreen) {
+      min-height: 350px;
+      width: 98%;
+    }
+    box-shadow: -1px -1px 2px #ccc;
+    @keyframes fadein {
+      from {
+        margin-top: -20px;
+        opacity: 0;
+      }
+      to {
+        margin-top: 0;
+        opacity: 1;
+      }
+    }
+    .tweetct {
+      margin: 0 auto;
+      width: 90%;
+      padding: 10px;
+      display: grid;
+      grid-template: 100px 1fr 30px 30px 50px/1fr;
+      .tweethead {
+        display: grid;
+        grid-template: 1fr 1fr/ 100px 1fr;
+        .tweetlogo {
+          grid-area: 1/1/3/2;
+          display: grid;
+          .tlogo {
+            align-self: center;
+            justify-self: center;
+            height: 80px;
+            width: 80px;
+            border: double 3px #eee;
+            border-radius: 40px;
+            box-shadow: -1px -1px 2px #666;
+          }
+        }
+        .twitername {
+          font-family: 'Lobster', cursive;
+          font-size: 1.5rem;
+          grid-area: 1/2/2/3;
+          display: flex;
+          align-self: flex-end;
+        }
+        .twiterhome {
+          color: #666;
+          grid-area: 2/2/3/3;
+          margin: 3px auto auto 10px;
+        }
+      }
+      .twittext {
+        overflow-wrap: break-word;
+
+        color: #777;
+        min-height: 100px;
+        font-size: 1.5rem;
+        padding: 5px 10px 10px 10px;
+        word-break: break-all;
+        word-wrap: break-word;
+
+        -ms-word-break: break-all;
+
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+
+        font-family: 'Exo 2', sans-serif;
+      }
+      .twitdate {
+        padding: 0 0 0px 10px;
+      }
+      .twitfav {
+        padding: 0 0 0px 8px;
+      }
+      .twitsource {
+        min-height: 100px;
+      }
+
+      .twitgo {
+        text-align: right;
+        a {
+          text-decoration: none;
+        }
+
+        .goarrow {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          box-shadow: 1px 1px 1px #666;
+          font-size: 0.8rem;
+          border-radius: 5px;
+          color: white;
+          border: 1px solid #eee;
+          width: 200px;
+          height: 20px;
+          background-color: rgba(246, 130, 13, 0.9);
+          margin: auto 0 20px auto;
+        }
+      }
+    }
+  }
+}

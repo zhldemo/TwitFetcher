@@ -1,0 +1,16 @@
+.footct{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90%;
+  height: 40px;
+  .btlogo{
+    align-self: center;
+    width:20px;
+    height: 16px;
+    background-image: url(../../img/zhldev.jpg);
+    background-size: cover;
+  }
+}
